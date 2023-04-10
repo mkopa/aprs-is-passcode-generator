@@ -69,6 +69,14 @@ a.pure-button-primary {
   width: 100%;
 }
 
+a {
+  color: #7f8c8d;
+  font-weight: bold;
+  /* pointer-events: none; */
+  text-decoration: none;
+  /* font-family: 'FontAwesome'; */
+}
+
 .splash-container {
   background: #1f8dd6;
   z-index: 9999;
