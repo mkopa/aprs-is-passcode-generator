@@ -116,6 +116,8 @@ a {
   color: white;
   letter-spacing: 0.05em;
   opacity: 0.8;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .content-wrapper {
