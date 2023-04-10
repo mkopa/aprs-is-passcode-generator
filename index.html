@@ -34,7 +34,7 @@
         />
         <h2 id="passcode" class="splash-subhead">Passcode:</h2>
       </div>
-      <div class="footer l-box is-center">&copy; 2023 SP4MK</div>
+      <div class="footer l-box is-center">&copy; 2023 marcin.info</div>
     </div>
   </body>
   <script>
@@ -54,7 +54,7 @@
       const pass = zeroPad(
         Array.from(
           encoding.encode(
-            callsign.trim().replace(" ", "").toUpperCase().split("-")[0]
+            callsign.trim().replace(" ", "").toUpperCase().split("-").shift()
           )
         ).reduce(
           (acu, currentChar, index) =>
