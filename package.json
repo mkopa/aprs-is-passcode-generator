@@ -4,6 +4,7 @@
   "description": "APRS IS Passcode Generation",
   "main": "index.js",
   "scripts": {
+    "build": "node-minify --compressor uglify-js --input './src/web/app.js' --output './app.js' --option '{\"warnings\": true, \"mangle\": true}' && node-minify --compressor clean-css --input './src/web/styles.css' --output './styles.css' --option '{\"advanced\": true, \"aggressiveMerging\": true}'",
     "start": "serve .",
     "format": "prettier --write \"./**/*.html\" \"./**/*.css\""
   },
@@ -11,6 +12,12 @@
   "author": "Marcin Kopa",
   "license": "MIT",
   "devDependencies": {
+    "@node-minify/babel-minify": "^8.0.5",
+    "@node-minify/cli": "^8.0.5",
+    "@node-minify/core": "^8.0.5",
+    "@node-minify/google-closure-compiler": "^8.0.5",
+    "@node-minify/html-minifier": "^8.0.5",
+    "@node-minify/uglify-js": "^8.0.5",
     "eslint": "^8.38.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-node": "^4.1.0",
@@ -23,5 +30,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.7",
     "serve": "^14.2.0"
+  },
+  "dependencies": {
+    "@node-minify/clean-css": "^8.0.5"
   }
 }
