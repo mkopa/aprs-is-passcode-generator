@@ -1,4 +1,4 @@
-# APRS&dash;IS Password Generator
+# APRS&dash;IS Passcode Generator
 
 ```
 npm i
@@ -9,4 +9,4 @@ npm start
 npm run format
 ```
 
-https://mkopa.github.io/aprs-is-passcode-generator
+Try: https://mkopa.github.io/aprs-is-passcode-generator

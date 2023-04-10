@@ -71,10 +71,7 @@ a.pure-button-primary {
 
 a {
   color: #7f8c8d;
-  font-weight: bold;
-  /* pointer-events: none; */
   text-decoration: none;
-  /* font-family: 'FontAwesome'; */
 }
 
 .splash-container {
@@ -121,7 +118,6 @@ a {
   letter-spacing: 0.05em;
   opacity: 0.8;
   font-size: 20px;
-  font-weight: bold;
 }
 
 .content-wrapper {
