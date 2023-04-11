@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-      "outDir": "./doc",
+      "outDir": "./docs",
       "noImplicitAny": true,
       "module": "es6",
       "target": "es5",

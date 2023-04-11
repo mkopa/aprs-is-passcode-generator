@@ -4,13 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
-const buildPath = path.resolve(__dirname, 'doc');
+const buildPath = path.resolve(__dirname, 'docs');
 
 module.exports = {
-    // devtool: 'source-map',
     entry: ['./src/web/app.ts', './src/web/styles.css'],
     output: {
-        // filename: 'app.js',
         filename: '[name].[contenthash].js',
         path: buildPath,
         clean: true
@@ -21,7 +19,6 @@ module.exports = {
             filename: 'index.html'
         }),
         new MiniCssExtractPlugin({
-            // filename: 'styles.css',
             filename: '[name].[contenthash].css',
         })
     ],
