@@ -4,20 +4,23 @@
   "description": "APRS IS Passcode Generation",
   "main": "index.js",
   "scripts": {
-    "build": "node-minify --compressor uglify-js --input './src/web/app.js' --output './app.js' --option '{\"warnings\": true, \"mangle\": true}' && node-minify --compressor clean-css --input './src/web/styles.css' --output './styles.css' --option '{\"advanced\": true, \"aggressiveMerging\": true}'",
-    "start": "serve .",
-    "format": "prettier --write \"./**/*.html\" \"./**/*.css\""
+    "build": "webpack --config webpack.config.js --mode=production",
+    "start": "serve ./doc",
+    "format": "prettier --write \"./src/**/*.html\" \"./src/**/*.css\" \"./src/**/*.ts\"",
+    "postinstall": "npm-install-peers"
   },
   "keywords": [],
   "author": "Marcin Kopa",
   "license": "MIT",
   "devDependencies": {
-    "@node-minify/babel-minify": "^8.0.5",
-    "@node-minify/cli": "^8.0.5",
-    "@node-minify/core": "^8.0.5",
-    "@node-minify/google-closure-compiler": "^8.0.5",
-    "@node-minify/html-minifier": "^8.0.5",
-    "@node-minify/uglify-js": "^8.0.5",
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "ajv": "^8.12.0",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^5.0.0",
     "eslint": "^8.38.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-node": "^4.1.0",
@@ -28,10 +31,18 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "npm-install-peers": "^1.2.2",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
     "prettier": "^2.8.7",
-    "serve": "^14.2.0"
-  },
-  "dependencies": {
-    "@node-minify/clean-css": "^8.0.5"
+    "serve": "^14.2.0",
+    "style-loader": "^3.3.2",
+    "terser-webpack-plugin": "^5.3.7",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.78.0",
+    "webpack-cli": "^5.0.1"
   }
 }
