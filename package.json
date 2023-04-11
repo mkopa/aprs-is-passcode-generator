@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js --mode=production",
     "start": "serve ./docs",
-    "format": "prettier --write \"./src/**/*.html\" \"./src/**/*.css\" \"./src/**/*.ts\"",
+    "format": "prettier --write \"./src/**/*.html\" \"./src/**/*.css\" \"./src/**/*.ts\" \"./webpack.config.js\"",
     "postinstall": "npm-install-peers"
   },
   "keywords": [],
