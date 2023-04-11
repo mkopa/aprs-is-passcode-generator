@@ -1,4 +1,4 @@
-# APRS&dash;IS Passcode Generator
+# 📡 APRS&dash;IS Passcode Generator
 
 ```
 $ npm i
