@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-
+const{ CleanWebpackPlugin } = require("clean-webpack-plugin");
 const buildPath = path.resolve(__dirname, 'docs');
 
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
     output: {
         filename: '[name].[contenthash].js',
         path: buildPath,
-        clean: true
+        clean: false
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -20,7 +20,10 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css',
-        })
+        }),
+        new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns: [path.join(__dirname, "docs/**/*.js"), path.join(__dirname, "docs/**/*.css", path.join(__dirname, "docs/**/*.html"))],
+        }),
     ],
     module: {
         rules: [
