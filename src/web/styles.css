@@ -85,6 +85,10 @@ a {
   position: absolute !important;
 }
 
+.input-callsign {
+  width: 100%;
+}
+
 .splash {
   width: 80%;
   height: 50%;
