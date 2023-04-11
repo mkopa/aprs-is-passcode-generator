@@ -2,7 +2,7 @@
 
 ```
 $ npm i
-$ npm build # start build process
+$ npm run build # start build process
 $ npm start # start webserver on localhost:3000
 $ npm run format # format code
 ```
